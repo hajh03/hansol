@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+/*웹 뷰에서 안보이는 아이들*/
+/*mPenal*/
+.panel, .mCon03Grid04, .mMainCon04 {
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+/*0~768px까지 적용될 css*/
+/*mobile setting*/
+    body {
+        min-width: auto;
+    }
+    .inner{
+        width: auto;
+        margin: 0;
+    }
+/*모바일 뷰에서 안보이는 아이들*/
+    .gnb, 
+    .util, 
+    .mainCon02, 
+    .con03Menu04, 
+    .mainCon04,
+    .fLogo,
+    .fInfo {
+        display: none;
+    }
+/*모바일 뷰에서 생기는 아이들*/
+    .panel, .mCon03Grid04, .mMainCon04 {
+        display: block;
+    }
+/*사이즈 변경 아이들    */
+    #header h1, 
+    .panel,
+    .sliderBtn,
+    .con01List li span{
+        background-size: 400px !important; 
+    }
+    
+/*header*/
+    #header {
+        height: auto;
+        margin: 10px 20px;
+    }
+    #header h1 {
+        width: 70px;
+        height: 28px; 
+        background-position: 0 0; 
+        position: static;
+    }
+    .panel {
+        width: 16px;
+        height: 16px;
+        background : url(../images/sp_com.png) -227px -97px;
+        text-indent: -9999px;
+        position: absolute;
+        top: 6px;
+        right: 0;
+    }
+    .panel a {
+        display: block;
+        height: 100%;
+    }
+    
+    /*메인슬라이더*/
+    .mainSlider {
+        margin: 0;
+        height: auto;
+        padding: 45% 0; /*뷰포트기준으로 %*/
+    }
+    .sliderText{
+        padding-top: 0;
+    }
+    .sliderText h2 {
+        font-size: 14px;
+        font-family: 'NotoSans', sans-serif;
+    }
+    .sliderText p {
+        font-size: 11px;
+    }
+    .sliderBtn {
+        width: 13px;
+        height: 23px;
+        background-position: -64px -30px;
+        margin-top: -12px;
+    }
+    .prevBtn {
+        left: 10px;
+    }
+    .nextBtn {
+        background-position: -79px -30px;
+        right: 10px;
+    }
+    
+    /*메인컨텐츠01*/
+    .mainCon01 {
+        padding: 20px 0;
+    }
+    .con01List {
+        display: block;
+        overflow: hidden;
+        margin: 0 30px;
+    }
+    .con01List li {
+        margin: 0;
+        width: 33.33%;
+        padding: 10px 0;
+        overflow: hidden;
+    }
+    .con01List li span {
+        width: 33px;
+        height: 33px;
+        margin: 0 auto;
+    }
+    .con01List li:hover span{
+    background-position-y: -57px;
+    }
+    .con01List li:hover p {
+        color: #333;
+    }
+    .con01Icon01 {
+        background-position: -1px -57px;
+    }
+    .con01Icon02 {
+        background-position: -37px -57px;
+    }
+    .con01Icon03 {
+        background-position: -74px -57px;
+    }
+    .con01Icon04 {
+        background-position: -109px -57px;
+    }
+    .con01Icon05 {
+        background-position: -145px -57px;
+    }
+    .con01Icon06 {
+        background-position: -181px -57px;
+    }
+    
+    /*메인컨텐츠03*/
+    .mainCon03 {
+        padding: 0 10px;
+    }
+    .con03Grid {
+        width: calc(50% - 5px);
+        height: auto;
+        margin-right: 10px; 
+        position: relative;
+        margin-bottom: 10px; /*아래는 부모 마진바텀이랑 겹쳐짐*/
+    }
+    .con03Grid:nth-child(2n) {
+        margin-right: 0; 
+    }
+    .con03Grid::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    .con03Grid a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .con03Grid h3 {
+        padding-top: 0;
+        position: absolute;
+        width: 100%; /*부모가로 있으면 자동으로 중앙정렬됨*/ 
+        top: 50%;
+        transform: translate(0, -50%);
+        font-family: 'NotoSans', sans-serif;
+        font-size: 15px;
+    }
+    .mCon03Grid04 {
+        padding: 0;
+    }
+    .mCon03Grid04 h3 {
+        margin-bottom: 0;
+    }
+    .con03Grid:hover p {
+        display: none;
+    }
+    
+    /*모바일컨텐츠04*/
+    .mMainCon04 dl{
+        background: #f2f0ed;
+        line-height: 45px;
+        height: 45px;
+        font-size: 13px;
+        margin: 0 10px 10px 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .mMainCon04 dt {
+        width: 20%;
+        text-align: center;
+        color: #2d5b79;
+        font-weight: bold;
+    }
+    .mMainCon04 dd {
+        width: 70%;
+        /*white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
+    }
+    .mMainCon04 dd a { 
+        /*점처리; 글씨의 바로 부모한테 줘야 함. 
+        a태그 블락을 줘야하면 a태그에 주고, 
+        아니면 dd에 바로 줌.*/
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /*메인컨텐츠05*/
+    .mainCon05 {
+        padding: 20px 10px 10px;
+    }
+    .mainCon05 li {
+        width: calc(50% - 5px);
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .mainCon05 li:nth-child(2n) {
+        margin-right: 0;
+    }
+    .con05Menu h3 {
+        padding: 80% 0 25%;
+        font-size: 15px;
+    }
+    .con05Menu p {
+        display: none;
+    }
+    
+    /*footer*/
+    .fTop {
+        text-align: center;
+    }
+    .fMenu {
+        line-height: 30px;
+        width: 100%;
+    }
+    .fMenu li {
+        float: none; /*인라인블락을 적용하기 위해서 */
+        display: inline-block;
+    }
+    .fMenu li:first-child::before {
+        display: none;
+    }
+    .csFamily {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .csFamily > div {
+        box-sizing: border-box;
+        float: none;
+        display: inline-block;
+    }
+    .csBox {
+        width: 50%;
+    }
+    .csBox .num {
+        font-size: 13px;
+        margin-top: 0;
+    }
+    .familyBox {
+        width: 30%;
+        text-align: left;
+        font-size: 11px;
+    }
+    .fBottom {
+        padding: 20px 0;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    #footer {
+        letter-spacing: -1px;
+    }
+    .csBox .num {
+        font-size: 12px;
+    }
+}

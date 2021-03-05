@@ -1,0 +1,472 @@
+@charset "utf-8";
+
+/*메인슬라이더*/
+.mainSlider {
+    background: url(../images/main_img.jpg) no-repeat center center;
+    height: 690px;
+    margin: 0 50px; /*(width값 없어서 스크롤 안생김. 패딩주면 백그라운드 사이즈가 늘어남-보더박스줘야해서 번거로움)*/
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.sliderText {
+    padding-top: 278px;/*(자기높이 뺀 위아래 여백의 반값/마진값은 부모랑 같이 밀림.)*/
+    /*
+    (배경이 백그라운드가 아니라 이미지로 들어오면 앱솔루트로 각자 띄워야하는데
+    백그라운드이기 때문에 바로 마진패딩값으로 위아래 위치잡으면 됨.
+    정확한 위치잡으려면 앱솔루트 사용.)
+    */
+}
+.sliderText h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+.sliderText h2 span {
+    display: block;
+}
+.sliderText p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.sliderBtn {
+    width: 25px;
+    height: 45px;
+    background: url(../images/sp_com.png) no-repeat -128px -61px;
+    text-indent: -9999px;
+    position: absolute; /*부모 relative값 확인, 없으면 뷰포트 기준으로 됨*/
+    top: 50%;
+    margin-top: -23px;/*(길이 반만큼 올려줌)*/
+}
+.sliderBtn a {
+    display: block; /*(글씨 날리고 같이 날라간 a태그 영역 찾아오기) */
+    height: 100%; /*(글씨영역만큼 a태그영역 되므로 부모요소 사이즈 100%로 채워주기!)*/
+}
+.prevBtn {
+    left: 30px;
+}
+.nextBtn {
+    background-position: -158px -61px;
+    right: 30px;
+}
+
+
+/*메인컨텐츠01*/
+.mainCon01 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.con01List {
+    display: inline-block; /*cf주면 블럭되서 인라인블락을 줘서 해제하고 중앙정렬할 것*/   
+}
+.con01List li {
+    float: left;
+    font-size: 14px;
+    margin: 0 30px;
+}
+
+/*메인컨텐츠01 호버*/
+.con01List li:hover span{
+    background-position-y: -184px;
+}
+.con01List li:hover p {  /*a태그 안에 p태그 있어서 p태그에 주면 됨*/
+    color: #2d5b79;
+}
+/*같은 li:hover이기 때문에 마우스 올리면 한꺼번에 변함*/
+/*메인컨텐츠01 호버*/
+
+.con01List li a {}
+.con01List li span {
+    display: block;
+    width: 64px;
+    height: 52px;
+    background-image: url(../images/sp_com.png);
+/* 백그라운드로 단축속성을 주면 포지션값 설정하는꼴.
+.con01Icon01에 포지션 값 줄때 덮어쓸 수 없다. 우선순위 약해서.
+백그라운드 이미지는 공통으로 주고, 포지션 속성을 각각에 분리시켜서 적용*/
+    text-indent: -9999px;
+    margin-bottom: 20px;
+}
+
+.con01Icon01 {
+    background-position: -3px -118px;
+}
+/*.con01Icon01:hover {
+    background-position: -3px -184px; 
+}*/
+.con01Icon02 {
+    background-position: -74px -118px;
+}
+.con01Icon03 {
+    background-position: -147px -118px;
+}
+.con01Icon04 {
+    background-position: -219px -118px;
+}
+.con01Icon05 {
+    background-position: -291px -118px;
+}
+.con01Icon06 {
+    background-position: -362px -118px;
+}
+
+.con01List li p {
+}
+
+
+/*메인컨텐츠02*/
+.mainCon02 {
+    background: #dfd9d1;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.con02Tit {
+    text-align: center;
+}
+.con02Tit h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.con02Tit p{
+    margin-bottom: 40px;
+}
+
+.con02Box {
+    position: relative; /*슬라이더버튼 위치기준*/
+}
+
+
+.con02Box>div { /*첫번째 div만!*/
+    float: left;
+}
+
+.con02L {
+    position: relative;
+}
+.con02L img {
+    display: block; /*이미지 인라인이라 공백이 있어서 왼쪽글자박스 빠져나옴. 블럭으로 변경*/
+}
+.leftTxt {
+    height: 100%;
+    width: 240px;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
+.leftTxt h4 {
+    font-size: 13px;
+}
+.leftTxt p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.leftTxt span {
+    font-weight: bold;
+}
+.leftTxt .lastTxt {
+    font-size: 13px;
+}
+.leftTxt .moreBtn {
+    width: 210px;
+    position: absolute;
+    bottom: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px; 
+    /*버튼 안의 내부중앙정렬, 패딩으로 주려면 a태그에 영역때문에..*/
+}
+.leftTxt .moreBtn a:hover { 
+    background : #fff;
+    color: #333;
+}
+.leftTxt .moreBtn a { 
+    color: #fff;
+    display: block; /*마우스영역 풀로..*/
+    
+}
+
+.con02R {
+    width: 400px;
+    height: 430px;
+    background: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.con02R ul {}
+.con02R li {
+    padding-top: 22px;
+}
+.con02R li a {}
+.con02R li a img {
+    width: 80px;
+    vertical-align: middle; /*인라인일때 각자가 인라인일때 정렬됨 */
+}
+.listInfo { /*인라인으로 만들어 옆으로 붙인다. 그냥 플룻레프트주면 이미지 앞으로 들어감*/
+    display: inline-block;
+    vertical-align: middle;
+}
+.listInfo p {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 2;
+}
+.con02Box .prevBtn {
+    left: -50px;
+}
+.con02Box .nextBtn {
+    right: -50px;
+}
+
+
+/*메인컨텐츠03*/
+.mainCon03 {}
+
+.con03Grid { 
+    width: 285px;
+    height: 285px;
+    text-align: center;
+    background: url(../images/mainrow3_img1.jpg) no-repeat ;
+    background-size: 100%; /*단축속성으로 써도됨. 헷갈려서 따로 적음*/
+    float: left;
+    margin-right: 20px;   
+} 
+.con03Grid a {
+    display: block; 
+    height: 100%; /*부모영역 전체 클릭영역으로*/
+}
+.con03Grid h3 {
+    padding-top: 100px; /*a태그에 패딩주면 영역이 밀리기 때문에. 보더박스 줘도 되지만 불필요한것 같아. h3에 직접 적용 */
+}
+.con03Grid p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: none;
+}
+.con03Grid:hover p {
+    display: block;
+}
+.con03Grid:hover a {
+    background: rgba(45,91,121,.7);
+    color: #fff;
+}
+
+.con03Menu01 h3, 
+.con03Menu03 h3 {
+    color: #fff;
+}
+
+.con03Menu02 {
+    background-image: url(../images/mainrow3_img2.jpg); 
+/*    사이즈나 다른 적용들 그대로 적용 안풀리도록 이미지만 바꾸려고 개별속성으로 덮어쓰기*/ 
+}
+.con03Menu03 {
+    background-image: url(../images/mainrow3_img3.jpg); 
+}
+.con03Menu04 {
+    background: #f2f0ed;
+    margin-right: 0;
+/*    따로 클래스를 줘서 우선순위 이김. 덮어쓰기 가능*/
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.con03Menu04 h3 {
+    padding-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/*제품 찾기 폼*/
+.con03Menu04 select, 
+.con03Menu04 input, 
+.con03Menu04 button {
+    appearance: none; /*기본 장식속성값 제거하기*/
+    -webkit-appearance: none;
+    border: none;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box; /*인풋에 패딩 사방에 기본적으로 있어서/ 셀렉트에는 보더박스 기본장착 두개가 너비가 달라서..*/
+    margin-top: 10px;
+    padding: 0 15px;
+    outline: none;
+}
+.con03Menu04 select{
+    background: #fff url(../images/arrow.png) no-repeat 95% center; /*x값 y값*/
+    
+}
+.con03Menu04 select::-ms-expand {
+/*인터넷익스플로러 효과없애기*/
+    display: none;
+}
+.con03Menu04 input {}
+.con03Menu04 button {
+    width: 245px; /*부모 너비에 양옆 패딩값을 빼서 너비계산*/
+    background: #2d5b79;
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    cursor: pointer;
+}
+
+
+/*메인컨텐츠04*/
+.mainCon04 {
+    margin: 20px auto 50px;
+}
+
+.con04Box {
+    width: 590px;
+    height:200px;
+    background: #f1efec;
+    float: left;
+    margin-right: 20px;
+}
+
+.con04Tit {
+    text-align: center;
+    color: 20px;
+    height: 60px;
+    line-height: 60px;
+    color: #2d5b7b;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+.con04Tit h3{}
+.plusBtn{
+    width: 32px;
+    height: 32px;
+    background: #fff url(../images/sp_com.png) no-repeat -195px -59px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 14px; /*높이 32 60 나머지1/2 여백값. 아니면 앱솔루트 탑 50퍼해서 요소높이 반만큼 올려줌.*/
+    text-indent: -9999px;
+}
+.plusBtn a{
+    display: block;
+}
+
+.con04Box ul {}
+.con04Box li {  
+}
+
+.con04Box li:last-child {
+    border: 0;
+}
+
+.con04Box a {}
+
+.con04Box a:hover,
+.con04Box a:hover span{ /*뉴스파트 스판은 앱솔루트로 떠있어서 상속이 안먹히는듯..*/
+    text-decoration: underline;
+}
+
+.con04Box p {
+    width: 100%;
+    font-size: 14px; 
+/*    말줄임 세트*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /*요소 너비가 있어야 적용됨*/
+}
+.con04Box span {
+    font-size: 12px; 
+    color: #999;
+    padding: 10px 0;
+    display: block;
+}
+
+.noticeList li {
+    height: 139px; /*전체높이200-위에높이61*/
+    padding: 20px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #fff;
+}
+
+.news {
+    margin-right: 0;
+}
+.news li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    border-bottom: 1px solid #fff;
+}
+/*.news li:last-child {
+    border-bottom: 0;
+}*/
+.news li a {
+    position: relative;
+    display: block;   /*마진으로 바꾸는 게 편한데 패딩안에 a태그 있으니까 기준을 바꿔주면*/
+}
+.news li p{
+    width: 70%; 
+}
+
+.news li span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0; 
+}
+
+/*메인컨텐츠05*/
+.mainCon05 {
+    background: url(../images/mainrow4_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.con05Menu {}
+.con05Menu li {
+    width: 285px;
+    height: 397px;
+    float: left;
+    text-align: center;
+    background-size: 100%;
+    margin-right: 20px;
+    background-size: 100% 100%;
+}
+.con05Menu01 {
+    background-image: url(../images/mainrow5_img1.jpg);
+}
+.con05Menu02 {
+    background-image: url(../images/mainrow5_img2.jpg);
+}
+.con05Menu03 {
+    background-image: url(../images/mainrow5_img3.jpg);
+}
+li.con05Menu04{ /*li이고 .con05Menu04인*/
+    background-image: url(../images/mainrow5_img4.jpg);
+    margin-right: 0;
+}
+
+.con05Menu a {
+    display: block;
+    height: 100%;
+}
+.con05Menu h3 {
+    font-size: 20px;
+    padding-top: 320px;
+}
+.con05Menu p {
+    font-size: 14px;
+}
+

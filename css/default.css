@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/*
+@font-face { 
+    font-family: 'paybooc-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+익스플로러열어서 하위버전에서도 확인해볼 것.
+*/
+
+/*
+* {
+    outline: none;
+}
+*/
+
+/*(전체선택자'*' 모든태그 각각에 적용/ 바디는 전체 화면에서 적용)*/
+body,h1,h2,h3,h4,h5,h6,p, dd, dl {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+/*    font-family: 'paybooc-Bold';*/
+}
+
+body {
+    min-width: 1200px;
+    color: #333;
+    font-family: 'NotoSans', sans-serif; 
+    /*폰트웨이트 없으면 레귤러 값 자동적용.
+    font-wieght: 300; 이걸 기본으로 지정하고 싶으면 따로 써주기*/
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto; /*(block인 요소 중앙정렬!! 
+    인라인은 안되나? 인라인은 정렬할 공간이 없음
+    (내용에 딱 맞게 크기가지고->가로세로값을 가질 수 없음. 다닥다닥 붙는 성질 auto할 여백이 없음))*/
+}
+
+.cf::after {
+    content: "";
+    clear: both;
+    display: block;
+}
